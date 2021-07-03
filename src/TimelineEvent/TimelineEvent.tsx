@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 /*
 Properties for TimelineEvent
@@ -12,13 +12,14 @@ initializes
 - 
 */
 
-function TimelineEvent({ children }: {children?: ReactNode}){
+function TimelineEvent({}) {
+  //const [ currentScene, setCurrentScene ] = useState([])
 
-    //const [ currentScene, setCurrentScene ] = useState([])
+  return (
+    <>
+      <h1></h1>
+    </>
+  );
+}
 
-    return (
-      <h1>{children}</h1>
-    )
-  }
-
-  export default TimelineEvent
+export default TimelineEvent;

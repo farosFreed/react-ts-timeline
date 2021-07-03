@@ -1,28 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import dataJson from './data/evolution_of_scientific_thinking.json';
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+//Timeline Component
+import Timeline from "./Timeline/Timeline";
+//Data
+import { default as dataJSON } from "./data/data.json";
 
 function App() {
+  //deconstruct json data into timeline props
+  //use state to track which event we are focused on?
+  //const data = dataJSON;
+  const [timelineData, setTimelineData] = useState(dataJSON);
 
-  //get data 
-  
+  const timelineTitle = timelineData.title;
+  const timelineEventData = timelineData.timelineEvents;
+  const timelineIntro = timelineData.introduction;
+
+  console.log(timelineData);
+  console.log(timelineEventData);
+  //console.log(timelineEventData);
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <Timeline
+        title={timelineTitle}
+        timelineEvents={timelineEventData}
+      ></Timeline>
     </div>
   );
 }

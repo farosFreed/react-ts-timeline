@@ -1,9 +1,9 @@
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode, useState } from "react";
 //styles element
-import { Wrapper } from './Timeline.styles'
+import { Wrapper } from "./Timeline.styles";
 
 //import Timeline Event
-import TimelineEvent from '../TimelineEvent/TimelineEvent';
+import TimelineEvent from "../TimelineEvent/TimelineEvent";
 
 /*
 Properties for timeline
@@ -38,24 +38,41 @@ function MyList<ListItem>({
     </ul>
   )
 }
-
 */
 
+//type of timelineEvents
+interface TimelineEventProvider {
+  Title: string;
+  Year: number;
+  Display_Date: string;
+}
 
-function Timeline<TimelineEvent>({ title, introduction, conclusion, timelineEvents }: {title: string, introduction?: string, conclusion?:string, timelineEvents:TimelineEvent[]}){
+function Timeline({
+  title,
+  introduction,
+  conclusion,
+  timelineEvents,
+}: {
+  title: string;
+  introduction?: string;
+  conclusion?: string;
+  timelineEvents?: Array<TimelineEventProvider>;
+}) {
+  //use state to track which event we are focused on?
+  const [currentScene, setCurrentScene] = useState();
 
-    const [ currentScene, setCurrentScene ] = useState([])
-
-    return (
+  //return a list of timeLineEvents
+  return (
     <Wrapper>
-        <h1>{title}</h1>
-        <ul>
-            {timelineEvents.map(event => {
-                <li key={event.title}></li>
-            })}
-        </ul>
+      <h1>{title}</h1>
+      <ul>
+        {timelineEvents?.map((item, index) => {
+          console.log(item);
+          return <li key={index}>{item.Title}</li>;
+        })}
+      </ul>
     </Wrapper>
-    )
-  }
+  );
+}
 
-  export default Timeline
+export default Timeline;
