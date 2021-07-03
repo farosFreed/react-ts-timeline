@@ -1,8 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import dataJson from './data/evolution_of_scientific_thinking.json';
 
 function App() {
+
+  //get data 
+  
   return (
     <div className="App">
       <header className="App-header">
