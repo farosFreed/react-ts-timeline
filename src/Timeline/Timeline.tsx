@@ -61,7 +61,9 @@ function Timeline({
   timelineEvents?: TimelineEventType[];
 }) {
   //vars
-  const [currentScene, setCurrentScene] = useState(0);
+  const [currentScene, setCurrentScene] = useState(0); //track focused event
+  let prevEventYear = 0; //tracks space between timelineEvents
+
   //functions
   const prevItem = (index: number) => {
     //minus 1, unless already 0
@@ -82,8 +84,23 @@ function Timeline({
       </div>
       <ul>
         {timelineEvents?.map((item: TimelineEventType, index) => {
-          console.log(item);
-          return <TimelineEvent key={index} item={item} />;
+          //calc space between this item and previous
+          //based on Year
+          let spaceBetween = 0;
+          if (prevEventYear !== 0) {
+            spaceBetween = Math.abs(item.Year - prevEventYear);
+          }
+          //create style
+          //default
+          let spacerStyles = {
+            marginTop: spaceBetween + "px",
+          };
+
+          //set for next
+          prevEventYear = item.Year;
+
+          //render
+          return <TimelineEvent key={index} item={item} style={spacerStyles} />;
         })}
       </ul>
     </Wrapper>

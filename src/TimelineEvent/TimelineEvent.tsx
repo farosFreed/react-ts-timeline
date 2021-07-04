@@ -1,22 +1,25 @@
 import { ReactNode } from "react";
+import CSS from "csstype";
 //types
 import { TimelineEventType } from "../App";
 
 function TimelineEvent({
   item,
-}: //prevItem,
-//nextItem,
-{
+  style,
+}: {
   item: TimelineEventType;
+  style: CSS.Properties;
   //prevItem: (clickedItemIm: TimelineEventType) => void;
   //nextItem: (clickedItem: TimelineEventType) => void;
 }) {
   return (
-    <>
-      <h1>{item.Title}</h1>
+    <li style={style}>
+      <h1>
+        {item.Title} - {item.Year}
+      </h1>
       <h3>{item.Display_Date}</h3>
-      <p>{item.Year.toString()}</p>
-    </>
+      <p>{item.Description}</p>
+    </li>
   );
 }
 
