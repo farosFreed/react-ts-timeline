@@ -1,10 +1,11 @@
 import React, { ReactNode, useState } from "react";
 //styles element
 import { Wrapper } from "./Timeline.styles";
-
-//import Timeline Event
+//components
 import TimelineEvent from "../TimelineEvent/TimelineEvent";
-
+import Button from "@material-ui/core/Button";
+//types
+import { TimelineEventType } from "../App";
 /*
 Properties for timeline
 - timeline title
@@ -41,11 +42,12 @@ function MyList<ListItem>({
 */
 
 //type of timelineEvents
-interface TimelineEventProvider {
+/*interface TimelineEvent {
   Title: string;
   Year: number;
   Display_Date: string;
-}
+  onClick: (item: TimelineEvent) => void;
+}*/
 
 function Timeline({
   title,
@@ -56,19 +58,32 @@ function Timeline({
   title: string;
   introduction?: string;
   conclusion?: string;
-  timelineEvents?: Array<TimelineEventProvider>;
+  timelineEvents?: TimelineEventType[];
 }) {
-  //use state to track which event we are focused on?
-  const [currentScene, setCurrentScene] = useState();
+  //vars
+  const [currentScene, setCurrentScene] = useState(0);
+  //functions
+  const prevItem = (index: number) => {
+    //minus 1, unless already 0
+    setCurrentScene((prev) => (prev > 0 ? prev - 1 : 0));
+  };
+  const nextItem = (index: number) => {
+    //minus 1, unless already 0
+    setCurrentScene((prev) => prev + 1);
+  };
 
   //return a list of timeLineEvents
   return (
     <Wrapper>
       <h1>{title}</h1>
+      <div className="navButtons" role="navigation">
+        <Button onClick={() => prevItem(currentScene)}>Prev</Button>
+        <Button onClick={() => nextItem(currentScene)}>Next</Button>
+      </div>
       <ul>
-        {timelineEvents?.map((item, index) => {
+        {timelineEvents?.map((item: TimelineEventType, index) => {
           console.log(item);
-          return <li key={index}>{item.Title}</li>;
+          return <TimelineEvent key={index} item={item} />;
         })}
       </ul>
     </Wrapper>
