@@ -48,7 +48,7 @@ function Timeline({
   return (
     <Wrapper className={config}>
       <h1>{title}</h1>
-      <div className="navButtons" role="navigation">
+      <div className="nav-buttons" role="navigation">
         <Button onClick={() => prevItem(currentScene)}>Prev</Button>
         <Button onClick={() => nextItem(currentScene)}>Next</Button>
       </div>
@@ -70,7 +70,14 @@ function Timeline({
           prevEventYear = item.Year;
 
           //render
-          return <TimelineEvent key={index} item={item} style={spacerStyles} />;
+          return (
+            <TimelineEvent
+              key={index}
+              item={item}
+              config={config}
+              style={spacerStyles}
+            />
+          );
         })}
       </ul>
     </Wrapper>

@@ -9,14 +9,16 @@ import { WrapperListItem } from "./TimelineEvent.styles";
 function TimelineEvent({
   item,
   style,
+  config,
 }: {
   item: TimelineEventType;
   style: CSS.Properties;
+  config?: string;
   //prevItem: (clickedItemIm: TimelineEventType) => void;
   //nextItem: (clickedItem: TimelineEventType) => void;
 }) {
   return (
-    <WrapperListItem style={style}>
+    <WrapperListItem style={style} className={config}>
       <div className="wrapper">
         <Card>
           <h1>

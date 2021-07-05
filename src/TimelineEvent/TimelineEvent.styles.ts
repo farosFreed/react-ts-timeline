@@ -5,8 +5,9 @@ const buttonSize = '15px'
 
 export const WrapperListItem = styled.li`
 
-    list-style: none;
+list-style: none;
 
+&:not(.theatre){
     .wrapper{
         position:relative;
         ::after {
@@ -45,4 +46,6 @@ export const WrapperListItem = styled.li`
             }
         }​
     }
+}
+
 `
