@@ -1,6 +1,7 @@
 export default {
   "title": "The Rise of Systems Thinking",
   "introduction": "Using Web of Life Ch. 2 - Capra (1996)",
+  "config": "theatre",
   "timelineEvents": [
     {
       "Title": "Aristotles theories on matter",

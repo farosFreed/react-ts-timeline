@@ -24,6 +24,7 @@ function App() {
   const timelineTitle = timelineData.title;
   const timelineEventData = timelineData.timelineEvents;
   const timelineIntro = timelineData.introduction;
+  const timelineConfig = timelineData.config;
 
   //console.log(timelineData);
   //console.log(timelineEventData);
@@ -31,7 +32,11 @@ function App() {
 
   return (
     <div className="App">
-      <Timeline title={timelineTitle} timelineEvents={timelineEventData} />
+      <Timeline
+        title={timelineTitle}
+        config={timelineConfig}
+        timelineEvents={timelineEventData}
+      />
     </div>
   );
 }

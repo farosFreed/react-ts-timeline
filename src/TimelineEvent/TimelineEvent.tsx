@@ -1,7 +1,10 @@
 import { ReactNode } from "react";
-import CSS from "csstype";
 //types
 import { TimelineEventType } from "../App";
+import CSS from "csstype";
+//styles
+import Card from "@material-ui/core/Card";
+import { WrapperListItem } from "./TimelineEvent.styles";
 
 function TimelineEvent({
   item,
@@ -13,13 +16,17 @@ function TimelineEvent({
   //nextItem: (clickedItem: TimelineEventType) => void;
 }) {
   return (
-    <li style={style}>
-      <h1>
-        {item.Title} - {item.Year}
-      </h1>
-      <h3>{item.Display_Date}</h3>
-      <p>{item.Description}</p>
-    </li>
+    <WrapperListItem style={style}>
+      <div className="wrapper">
+        <Card>
+          <h1>
+            {item.Title} - {item.Year}
+          </h1>
+          <h3>{item.Display_Date}</h3>
+          <p>{item.Description}</p>
+        </Card>
+      </div>
+    </WrapperListItem>
   );
 }
 

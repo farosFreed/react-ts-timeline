@@ -17,47 +17,17 @@ initializes ?
 - currentScene : tracks current displayed milestone or introduction/conclusion
 */
 
-/*
-
-//List component
-// w/ generics
-function MyList<ListItem>({
-  items,
-  render
-}: {
-  items: ListItem[], //my generic that can eventually hold data, like an empty array
-  render: (item: ListItem) => ReactNode //pass a listItem and render a ReactNode
-}){
-  return (
-    <ul>
-      {items.map((item, index) => (
-        <li key={index}>
-          {render(item) //call the render functions to render the item
-          }
-        </li>
-      ))}
-    </ul>
-  )
-}
-*/
-
-//type of timelineEvents
-/*interface TimelineEvent {
-  Title: string;
-  Year: number;
-  Display_Date: string;
-  onClick: (item: TimelineEvent) => void;
-}*/
-
 function Timeline({
   title,
   introduction,
   conclusion,
+  config,
   timelineEvents,
 }: {
   title: string;
   introduction?: string;
   conclusion?: string;
+  config?: string;
   timelineEvents?: TimelineEventType[];
 }) {
   //vars
@@ -76,7 +46,7 @@ function Timeline({
 
   //return a list of timeLineEvents
   return (
-    <Wrapper>
+    <Wrapper className={config}>
       <h1>{title}</h1>
       <div className="navButtons" role="navigation">
         <Button onClick={() => prevItem(currentScene)}>Prev</Button>
@@ -93,7 +63,7 @@ function Timeline({
           //create style
           //default
           let spacerStyles = {
-            marginTop: spaceBetween + "px",
+            paddingTop: spaceBetween + "px",
           };
 
           //set for next
