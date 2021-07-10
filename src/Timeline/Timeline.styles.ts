@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-//using div for now, can be whatever element
+//vars
+const headerHeight = '20vh'
+
 export const Wrapper = styled.div`
 
 position: relative;
@@ -11,7 +13,7 @@ ul {
     padding: 0px;
 }
 
-&:not(.theatre){
+&:not(.slider){
     @media only screen and (max-width: 759px) {
         ul::before {
             content:'';
@@ -23,10 +25,23 @@ ul {
     }
 }
 
-&.theatre {
-    color: blue;
-    .nav-buttons {
-        display: block;
+&.slider {
+    overflow-y: hidden;
+    overscroll-behavior-x: contain; //prevent browser 'back' when overscrolling to start
+    .timeline-header {
+        text-align: center;
+        height: ${headerHeight};
+        width: 100vw;
+        position: fixed;
+        background: white;
+        .nav-buttons {
+            display: block;
+        }
+    }
+    ul {
+        padding-top: ${headerHeight};
+        height: calc(95vh - ${headerHeight});
+        background: blue;
     }
 }
 

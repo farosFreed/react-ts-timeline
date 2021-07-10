@@ -1,7 +1,7 @@
 export default {
   "title": "The Rise of Systems Thinking",
   "introduction": "Using Web of Life Ch. 2 - Capra (1996)",
-  "config": "theatre",
+  "config": "slider",
   "timelineEvents": [
     {
       "Title": "Aristotles theories on matter",
@@ -15,6 +15,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Early Science",
+      "Era": "Cartesian Mechanics",
       "Background": "#d0e0b8"
     },
     {
@@ -29,6 +30,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Early Science",
+      "Era": "Cartesian Mechanics",
       "Background": "#d0e0b8"
     },
     {
@@ -43,6 +45,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Early Science",
+      "Era": "Cartesian Mechanics",
       "Background": "#d0e0b8"
     },
     {
@@ -57,6 +60,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Physics",
+      "Era": "Cartesian Mechanics",
       "Background": "#d0e0b8"
     },
     {
@@ -71,6 +75,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Biology",
+      "Era": "The Romantic Movement",
       "Background": "#88b04b"
     },
     {
@@ -85,6 +90,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Philosophy",
+      "Era": "The Romantic Movement",
       "Background": "#88b04b"
     },
     {
@@ -99,6 +105,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Geology",
+      "Era": "The Romantic Movement",
       "Background": "#88b04b"
     },
     {
@@ -113,6 +120,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Geology",
+      "Era": "The Romantic Movement",
       "Background": "#88b04b"
     },
     {
@@ -127,6 +135,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Biology",
+      "Era": "19th Century Mechanism",
       "Background": "#88b04b"
     },
     {
@@ -141,6 +150,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Biology",
+      "Era": "19th Century Mechanism",
       "Background": "#44883c"
     },
     {
@@ -155,6 +165,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Biology",
+      "Era": "19th Century Mechanism",
       "Background": "#44883c"
     },
     {
@@ -169,6 +180,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Biology",
+      "Era": "19th Century Mechanism",
       "Background": "#44883c"
     },
     {
@@ -183,6 +195,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Biology",
+      "Era": "19th Century Mechanism",
       "Background": "#44883c"
     },
     {
@@ -197,6 +210,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Physics",
+      "Era": "Vitalism",
       "Background": "#2a333c"
     },
     {
@@ -211,6 +225,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Biology",
+      "Era": "Vitalism",
       "Background": "#2a333c"
     },
     {
@@ -225,6 +240,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Biology",
+      "Era": "Organismic Movement",
       "Background": "#222222"
     },
     {
@@ -239,6 +255,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Biology",
+      "Era": "Organismic Movement",
       "Background": "#222222"
     },
     {
@@ -253,6 +270,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Chemistry",
+      "Era": "Organismic Movement",
       "Background": null
     },
     {
@@ -267,6 +285,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Physics",
+      "Era": "Organismic Movement",
       "Background": null
     },
     {
@@ -281,6 +300,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Physics",
+      "Era": "Organismic Movement",
       "Background": null
     },
     {
@@ -295,6 +315,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Biology",
+      "Era": "Organismic Movement",
       "Background": null
     },
     {
@@ -309,6 +330,7 @@ export default {
       "Media Thumbnail": null,
       "Type": null,
       "Group": "Modern Science",
+      "Era": "Systems Thinking",
       "Background": null
     }
   ]

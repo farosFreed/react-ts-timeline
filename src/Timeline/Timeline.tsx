@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useState, useEffect } from "react";
 //styles element
 import { Wrapper } from "./Timeline.styles";
 //components
@@ -6,16 +6,6 @@ import TimelineEvent from "../TimelineEvent/TimelineEvent";
 import Button from "@material-ui/core/Button";
 //types
 import { TimelineEventType } from "../App";
-/*
-Properties for timeline
-- timeline title
-- timeline introduction?
-- timeline conclusion?
-- has an array of TimelineEvents
-
-initializes ?
-- currentScene : tracks current displayed milestone or introduction/conclusion
-*/
 
 function Timeline({
   title,
@@ -28,13 +18,21 @@ function Timeline({
   introduction?: string;
   conclusion?: string;
   config?: string;
-  timelineEvents?: TimelineEventType[];
+  timelineEvents: TimelineEventType[];
 }) {
   //vars
   const [currentScene, setCurrentScene] = useState(0); //track focused event
+  //const [sliderReady, setSliderReady] = useState(false); //track if slider has enough info to render
   let prevEventYear = 0; //tracks space between timelineEvents
+  //const [totalSpacebetween, setTotalSpacebetween] = useState(0); //totals up space between events to inform timeline how long to grow in slider mode
 
-  //functions
+  /*useEffect(() => {
+    //update
+    calcTimelineWidth();
+  }, [sliderReady]);*/
+
+  //SLIDER
+  //prev/next functions for slider style timeline
   const prevItem = (index: number) => {
     //minus 1, unless already 0
     setCurrentScene((prev) => (prev > 0 ? prev - 1 : 0));
@@ -43,16 +41,45 @@ function Timeline({
     //minus 1, unless already 0
     setCurrentScene((prev) => prev + 1);
   };
+  //calculate the width of the <ul> element
+  //based on number of events and space between each event
+  /*const calcTimelineWidth = () => {
+    let vw = (timelineEvents?.length + 1) * 50;
+    console.log(vw);
+    console.log("ran");
+    sliderWidth = {
+      width: "30vw",
+    };
+  };*/
 
+  //RENDER
   //return a list of timeLineEvents
   return (
     <Wrapper className={config}>
-      <h1>{title}</h1>
-      <div className="nav-buttons" role="navigation">
-        <Button onClick={() => prevItem(currentScene)}>Prev</Button>
-        <Button onClick={() => nextItem(currentScene)}>Next</Button>
+      <div className="timeline-header">
+        <h1>{title}</h1>
+        {config === "slider" ? (
+          <div className="nav-buttons" role="navigation">
+            <Button onClick={() => prevItem(currentScene)}>Prev</Button>
+            <Button onClick={() => nextItem(currentScene)}>Next</Button>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
-      <ul>
+
+      {
+        //calc width of ul element if slider
+        //get number of events
+        //times event width
+        //+ total of all space between events
+      }
+
+      <ul
+        style={{
+          width: (timelineEvents.length * 60).toString() + "vw", //each one is 50, 60 allows for some space
+        }}
+      >
         {timelineEvents?.map((item: TimelineEventType, index) => {
           //calc space between this item and previous
           //based on Year
@@ -60,14 +87,23 @@ function Timeline({
           if (prevEventYear !== 0) {
             spaceBetween = Math.abs(item.Year - prevEventYear);
           }
-          //create style
-          //default
-          let spacerStyles = {
-            paddingTop: spaceBetween + "px",
-          };
+          //create styles
+          let spacerStyles = null;
+          //for 'slider' config
+          if (config === "slider") {
+            spacerStyles = {
+              paddingLeft: spaceBetween + "px",
+            };
+          } else {
+            //use default
+            spacerStyles = {
+              paddingTop: spaceBetween + "px",
+            };
+          }
 
           //set for next
           prevEventYear = item.Year;
+          //setTotalSpacebetween((prev) => (prev += spaceBetween));
 
           //render
           return (
