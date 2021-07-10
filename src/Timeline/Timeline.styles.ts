@@ -2,10 +2,23 @@ import styled from "styled-components";
 
 //vars
 const headerHeight = '20vh'
+//colors
+const timelineBg = '#333'
+const timelineTextColor = '#fff'
 
 export const Wrapper = styled.div`
 
 position: relative;
+margin:0;
+background: ${timelineBg};
+color: ${timelineTextColor};
+
+.timeline-header {
+    h1 {
+    margin-top:0;
+    padding-top:20px;
+    }
+}
 .nav-buttons {
     display: none;
 }
@@ -33,15 +46,26 @@ ul {
         height: ${headerHeight};
         width: 100vw;
         position: fixed;
-        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom:10px;
+        border-bottom: 1px solid ${timelineTextColor};
         .nav-buttons {
-            display: block;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .MuiButton-root {
+                color: ${timelineTextColor};
+                border-color: ${timelineTextColor};
+                margin:0 10px;
+            }
         }
     }
     ul {
         padding-top: ${headerHeight};
         height: calc(95vh - ${headerHeight});
-        background: blue;
+        background: ${timelineBg};
     }
 }
 

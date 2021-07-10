@@ -81,6 +81,9 @@ list-style: none;
     width: 50vw;
     height: 60vh;
     border-bottom: 1px solid ${defaultTimelineColor};
+    .MuiCard-root {
+        padding: 20px;
+    }
 }
 
 `

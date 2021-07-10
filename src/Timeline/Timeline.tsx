@@ -26,15 +26,17 @@ function Timeline({
   let prevEventYear = 0; //tracks space between timelineEvents
   //const [totalSpacebetween, setTotalSpacebetween] = useState(0); //totals up space between events to inform timeline how long to grow in slider mode
 
-  //scrollTo currentScene
+  //scrollTo currentScene IF slider config
   useEffect(() => {
-    let elem = document.getElementById(currentScene.toString());
-    if (elem) {
-      elem.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "end",
-      });
+    if (config === "slider") {
+      let elem = document.getElementById(currentScene.toString());
+      if (elem) {
+        elem.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "end",
+        });
+      }
     }
   }, [currentScene]);
 
@@ -79,8 +81,12 @@ function Timeline({
         <h1>{title}</h1>
         {config === "slider" ? (
           <div className="nav-buttons" role="navigation">
-            <Button onClick={() => prevItem(currentScene)}>Prev</Button>
-            <Button onClick={() => nextItem(currentScene)}>Next</Button>
+            <Button variant="outlined" onClick={() => prevItem(currentScene)}>
+              Prev
+            </Button>
+            <Button variant="outlined" onClick={() => nextItem(currentScene)}>
+              Next
+            </Button>
           </div>
         ) : (
           ""

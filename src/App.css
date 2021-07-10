@@ -1,16 +1,33 @@
+/*fonts*/
+@font-face {
+  font-family: 'Source-Sans';
+  src: url(fonts/SourceSansPro-Regular.otf) format(opentype);
+}
+@font-face {
+  font-family: 'Source-Sans';
+  font-weight: bold;
+  src: url(fonts/SourceSansPro-Bold.otf) format(opentype);
+}
+
+body {
+  margin:0;
+  padding:0;
+}
+
 .App {
   text-align: center;
+  font-family: 'Source-Sans', sans-serif;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/*@keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+}*/
