@@ -10,15 +10,18 @@ function TimelineEvent({
   item,
   style,
   config,
+  id,
 }: {
   item: TimelineEventType;
   style: CSS.Properties;
   config?: string;
+  id: string;
   //prevItem: (clickedItemIm: TimelineEventType) => void;
   //nextItem: (clickedItem: TimelineEventType) => void;
 }) {
   return (
     <WrapperListItem
+      id={id}
       style={style}
       className={config + " " + (item.Era ? item.Era : "")}
     >
