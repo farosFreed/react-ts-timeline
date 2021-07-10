@@ -30,6 +30,13 @@ function Timeline({
     //update
     calcTimelineWidth();
   }, [sliderReady]);*/
+  //calc dynamic styles based on config
+  let timelineStyles = {};
+  if (config === "slider") {
+    timelineStyles = {
+      width: (timelineEvents.length * 60).toString() + "vw",
+    };
+  }
 
   //SLIDER
   //prev/next functions for slider style timeline
@@ -75,11 +82,7 @@ function Timeline({
         //+ total of all space between events
       }
 
-      <ul
-        style={{
-          width: (timelineEvents.length * 60).toString() + "vw", //each one is 50, 60 allows for some space
-        }}
-      >
+      <ul style={timelineStyles}>
         {timelineEvents?.map((item: TimelineEventType, index) => {
           //calc space between this item and previous
           //based on Year

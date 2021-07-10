@@ -18,7 +18,10 @@ function TimelineEvent({
   //nextItem: (clickedItem: TimelineEventType) => void;
 }) {
   return (
-    <WrapperListItem style={style} className={config}>
+    <WrapperListItem
+      style={style}
+      className={config + " " + (item.Era ? item.Era : "")}
+    >
       <div className="wrapper">
         <Card>
           <h1>

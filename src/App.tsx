@@ -12,6 +12,7 @@ export type TimelineEventType = {
   Display_Date: string;
   Year: number;
   Description: string | null;
+  Era?: string | null;
 };
 
 function App() {
