@@ -26,10 +26,18 @@ function Timeline({
   let prevEventYear = 0; //tracks space between timelineEvents
   //const [totalSpacebetween, setTotalSpacebetween] = useState(0); //totals up space between events to inform timeline how long to grow in slider mode
 
-  /*useEffect(() => {
-    //update
-    calcTimelineWidth();
-  }, [sliderReady]);*/
+  //scrollTo currentScene
+  useEffect(() => {
+    let elem = document.getElementById(currentScene.toString());
+    if (elem) {
+      elem.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "end",
+      });
+    }
+  }, [currentScene]);
+
   //calc dynamic styles based on config
   let timelineStyles = {};
   if (config === "slider") {
@@ -42,11 +50,15 @@ function Timeline({
   //prev/next functions for slider style timeline
   const prevItem = (index: number) => {
     //minus 1, unless already 0
-    setCurrentScene((prev) => (prev > 0 ? prev - 1 : 0));
+    setCurrentScene((prev) =>
+      prev > 0 ? prev - 1 : timelineEvents.length - 1
+    );
   };
   const nextItem = (index: number) => {
-    //minus 1, unless already 0
-    setCurrentScene((prev) => prev + 1);
+    //plus 1, unless exceeding # of events
+    setCurrentScene((prev) =>
+      prev < timelineEvents.length - 1 ? prev + 1 : 0
+    );
   };
   //calculate the width of the <ul> element
   //based on number of events and space between each event
@@ -112,6 +124,7 @@ function Timeline({
           return (
             <TimelineEvent
               key={index}
+              id={index.toString()}
               item={item}
               config={config}
               style={spacerStyles}
