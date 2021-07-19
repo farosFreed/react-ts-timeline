@@ -22,8 +22,8 @@ function Timeline({
 }) {
   //vars
   const [currentScene, setCurrentScene] = useState(0); //track focused event
-  //const [sliderReady, setSliderReady] = useState(false); //track if slider has enough info to render
   let prevEventYear = 0; //tracks space between timelineEvents
+
   //const [totalSpacebetween, setTotalSpacebetween] = useState(0); //totals up space between events to inform timeline how long to grow in slider mode
 
   //scrollTo currentScene IF slider config
@@ -73,6 +73,13 @@ function Timeline({
     };
   };*/
 
+  //DERIVED VALUES
+  function calcSpaceBetweenPrev(itemYear: number, prevItemYear: number) {
+    //const xSquaresCount = squares.filter(r => r === 'X').length
+    //const oSquaresCount = squares.filter(r => r === 'O').length
+    //return oSquaresCount === xSquaresCount ? 'X' : 'O'
+  }
+
   //RENDER
   //return a list of timeLineEvents
   return (
@@ -93,15 +100,11 @@ function Timeline({
         )}
       </div>
 
-      {
-        //calc width of ul element if slider
-        //get number of events
-        //times event width
-        //+ total of all space between events
-      }
-
       <ul style={timelineStyles}>
         {timelineEvents?.map((item: TimelineEventType, index) => {
+          //START timeline event render
+
+          //calcSpaceBetweenPrev(item.Year, prevItemYear)
           //calc space between this item and previous
           //based on Year
           let spaceBetween = 0;
@@ -136,6 +139,7 @@ function Timeline({
               style={spacerStyles}
             />
           );
+          //END
         })}
       </ul>
     </Wrapper>

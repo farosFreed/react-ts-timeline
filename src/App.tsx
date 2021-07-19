@@ -4,7 +4,6 @@ import "./App.css";
 import Timeline from "./Timeline/Timeline";
 //Data
 import { default as dataJSON } from "./data/data.json";
-//import TimelineEvent from "./TimelineEvent/TimelineEvent";
 //Types
 //marked with export so that Timeline can get
 export type TimelineEventType = {
@@ -17,19 +16,12 @@ export type TimelineEventType = {
 
 function App() {
   //deconstruct json data into timeline props
-  //use state to track which event we are focused on?
-  //const data = dataJSON;
   const [timelineData, setTimelineData] = useState(dataJSON);
-  //const [currentScene, setCurrentScene] = useState(0);
 
   const timelineTitle = timelineData.title;
   const timelineEventData = timelineData.timelineEvents;
   const timelineIntro = timelineData.introduction;
   const timelineConfig = timelineData.config;
-
-  //console.log(timelineData);
-  //console.log(timelineEventData);
-  //console.log(timelineEventData);
 
   return (
     <div className="App">
