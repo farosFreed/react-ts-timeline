@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Project Description
 
-Description to come!
+Find a write-up of thos project at https://jessicadivers.com/creating-a-timeline-builder
 
 ### `yarn build`
 
