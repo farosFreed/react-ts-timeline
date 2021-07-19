@@ -1,0 +1,142 @@
+<mxfile>
+    <diagram id="2I6-KQUKs7SYitvAhjQb" name="Page-1">
+        <mxGraphModel dx="1430" dy="1488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="17" value="&lt;div&gt;&lt;span style=&quot;line-height: 140%&quot;&gt;LocalStorage&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;line-height: 140%&quot;&gt;(App State)&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;labelPosition=center;verticalLabelPosition=middle;verticalAlign=top;arcSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="237.5" y="30" width="170" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Derived Values" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
+                    <mxGeometry x="-150" y="125" width="100" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Timeline Properties" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="70" width="120" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Timeline Event style prop" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="220" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=classic;html=1;endSize=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="2">
+                    <mxGeometry x="-1" y="175" relative="1" as="geometry">
+                        <mxPoint x="320" y="142" as="sourcePoint"/>
+                        <mxPoint x="220" y="270" as="targetPoint"/>
+                        <mxPoint x="15" y="70" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="sets PaddingLeft or PaddingTop (depending on config" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="160" y="350" width="170" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Total timeline length" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="350" width="170" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Timeline JSON Data" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="-130" width="140" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="endArrow=classic;html=1;endSize=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="18" target="2">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="230" y="50" as="sourcePoint"/>
+                        <mxPoint x="330" y="50" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="Import as default&amp;nbsp;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="20">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-20" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="&lt;ul&gt;&lt;li&gt;Title string&lt;/li&gt;&lt;li&gt;introduction (optional)&lt;/li&gt;&lt;li&gt;Config Object&lt;/li&gt;&lt;li&gt;List of TEvents&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="237.5" y="-110" width="152.5" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="endArrow=classic;html=1;endSize=2;strokeColor=#6666FF;entryX=1.009;entryY=0.354;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="40">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="236" y="-23" as="sourcePoint"/>
+                        <mxPoint x="200" y="-100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="Properties" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="25">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=none;align=left;verticalAlign=top;labelBorderColor=none;strokeColor=#6666FF;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="-30" width="140" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=none;align=left;verticalAlign=top;labelBorderColor=none;strokeColor=#FFB366;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry x="243.75" y="-52" width="140" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="" style="endArrow=classic;html=1;endSize=2;strokeColor=#FFB366;exitX=1.026;exitY=0.69;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="23">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="380" y="-173" as="sourcePoint"/>
+                        <mxPoint x="440" y="-190" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="Properties" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="32">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="&lt;span&gt;Timeling Config Settings&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span&gt;Currently just a single string that&lt;/span&gt;&lt;br&gt;&lt;span&gt;signals specific style/layout settings for timeline.&amp;nbsp;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeColor=#FFB366;align=center;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="-210" width="230" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="Timeline Event Data&lt;br&gt;for each item in list" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;align=center;verticalAlign=top;strokeColor=#6666FF;" vertex="1" parent="1">
+                    <mxGeometry x="-40" y="-50" width="230" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="&lt;ul&gt;&lt;li&gt;id = index in list&amp;nbsp;&lt;/li&gt;&lt;li&gt;config (same as parent)&lt;/li&gt;&lt;li&gt;item Object&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Title string&lt;/li&gt;&lt;li&gt;Display_Date string&lt;/li&gt;&lt;li&gt;Year number&lt;/li&gt;&lt;li&gt;Description (optional)&lt;/li&gt;&lt;li&gt;Era (groups)(optional)&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;style (dervied from config + individual event data in parent)&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="-25" y="-18.5" width="200" height="227" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="endArrow=none;dashed=1;html=1;endSize=2;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-145" y="152" as="sourcePoint"/>
+                        <mxPoint x="415" y="152" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="45" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeColor=#CC0000;fillColor=none;align=center;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="-30" y="151" width="210" height="49" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="TO DO BUILDER&lt;br&gt;&amp;lt;Drawer&amp;gt;&lt;br&gt;&amp;lt;Form onSubmit&amp;gt;&lt;br&gt;&amp;lt;/Drawer&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="50" width="120" height="95" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="" style="endArrow=classic;endSize=2;strokeColor=#FFFFFF;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;html=1;startArrow=none;" edge="1" parent="1" source="50" target="2">
+                    <mxGeometry x="-0.3128" y="96" relative="1" as="geometry">
+                        <mxPoint x="390" y="100" as="sourcePoint"/>
+                        <mxPoint x="500" y="40" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="50" value="Overwrites default properties" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="430" y="100" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="" style="endArrow=none;endSize=2;strokeColor=#FFFFFF;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;html=1;" edge="1" parent="1" source="46" target="50">
+                    <mxGeometry x="-0.3128" y="96" relative="1" as="geometry">
+                        <mxPoint x="560" y="97.5" as="sourcePoint"/>
+                        <mxPoint x="380" y="120" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="52" value="" style="endArrow=classic;html=1;endSize=2;strokeColor=#990000;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=-0.017;exitY=0.133;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="4" target="45">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="246" y="-13" as="sourcePoint"/>
+                        <mxPoint x="202.06999999999994" y="52.039999999999964" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="190" y="250"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="53" value="Properties" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="52">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="Sets:&amp;nbsp;&lt;br&gt;COnfig&lt;br&gt;Title&lt;br&gt;More...&lt;br&gt;&lt;br&gt;For each Item in List&lt;br&gt;- name&amp;nbsp;&lt;br&gt;-year&amp;nbsp;&lt;br&gt;- optional month?&lt;br&gt;-optional day?" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="40" width="90" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="during .map()&lt;br&gt;uses:&lt;br&gt;item.year&lt;br&gt;saved / dervied? var prevItemYear&lt;br&gt;derived spaceBetween&lt;br&gt;" style="endArrow=classic;html=1;endSize=2;" edge="1" parent="1">
+                    <mxGeometry x="-1" y="102" relative="1" as="geometry">
+                        <mxPoint x="230" y="340" as="sourcePoint"/>
+                        <mxPoint x="290" y="290" as="targetPoint"/>
+                        <mxPoint x="-35" y="58" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="59" value="FunctionName(prop1, prop2)" style="endArrow=classic;html=1;endSize=2;strokeColor=#FFFFFF;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="12">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="430" y="330" as="sourcePoint"/>
+                        <mxPoint x="350" y="290" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
